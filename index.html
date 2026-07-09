@@ -6,368 +6,934 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mis 15 Caty</title>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <style>
+  /* Importar fuentes */
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap');
+
+  body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+  }
+
+  
+
+ 
+  
+
+  .seccion-texto {
+        padding: 10px 10px; /* Reducido drásticamente de 80px a 10px */
+        text-align: center;
+        color: white;
+        margin-top: -20px; /* Acercamos el texto a la foto */
+      }
+
+  .subtitulo {
+      font-family: 'Montserrat', sans-serif;
+      color: #D4AF37;
+      font-size: 5.5rem; /* Ajustado para que no sea excesivamente grande y ocupe espacio */
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      text-align: center;
+      margin: 1.1rem;
+      /*font-weight: bold;*/
+  }
+
+  .fecha { /* Catalina */
+      font-family: 'Great Vibes', cursive;
+      color: #FFFFFF;
+      font-size: 9rem;
+      line-height: 0.8; /* Reduce el espacio vertical de la línea */
+      margin: 3.1rem;
+      text-align:center;
+      text-align: center;
+      /* Hace la letra lo más delgada posible */
+    font-weight: 300;
+  }.fechaf { /* Catalina */
+      font-family: 'Great Vibes', cursive;
+      color: #FFFFFF;
+      font-size: 6rem;
+      line-height: 0.8; /* Reduce el espacio vertical de la línea */
+      margin: 3.1rem;
+      text-align:center;
+      text-align: center;
+      /* Hace la letra lo más delgada posible */
+    font-weight: 300;
+  }
+  .fecha1 { /* Catalina */
+      font-family: 'Great Vibes', cursive;
+      color: #FFFFFF;
+      font-size: 6rem;
+      line-height: 0.8; /* Reduce el espacio vertical de la línea */
+      margin: 3.1rem;
+      text-align:center;
+      text-align: center;
+      /* Hace la letra lo más delgada posible */
+    font-weight: 300;
+  }
+.subtituloI {
+      font-family: 'Montserrat', sans-serif;
+      color: #D4AF37;
+      font-size: 8.5rem; /* Ajustado para que no sea excesivamente grande y ocupe espacio */
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      text-align: center;
+      margin: 1.1rem;
+      /*font-weight: bold;*/
+      /* 🚀 SOLUCIÓN: Rompe el filtro oscuro del contenedor */
+    position: relative;
+    z-index: 10;
+  }
+
+  .fechaI { /* Catalina */
+      font-family: 'Great Vibes', cursive;
+      color: #FFFFFF;
+      font-size: 8.5rem;
+      line-height: 0.8; /* Reduce el espacio vertical de la línea */
+      margin: 3.1rem;
+      text-align:center;
+      text-align: center;
+      /* Hace la letra lo más delgada posible */
+    font-weight: 300;
+    /* 🚀 SOLUCIÓN: Rompe el filtro oscuro del contenedor */
+    position: relative;
+    z-index: 10;
+
+  }
+  
+  /* Estilos para la Tarjeta de la Fecha */
+.tarjeta-fecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ocupa el alto completo de la ventana */
+    width: 100%;
+    background-color:  #A3B19B; /* Verde Malva más claro */
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* Necesario para que las luciérnagas no se descontrolen */
+    overflow: hidden;
+}
+
+/* Contenedor del texto para asegurar centrado */
+.texto-fecha {
+    text-align: center;
+    z-index: 2; /* Pone el texto por encima de las luciérnagas */
+    width: 100%;
+    max-width: 600px; /* Evita que el texto se estire demasiado en PC */
+}
+
+/* Estilos de los textos adaptables (Responsive) */
+.titulo-invitacion {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;/*var(--verde-malva-oscuro); /* Blanco */
+    font-size: 4.5rem; /* Tamaño base para celular */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+.titulo-invitacion1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;/*var(--verde-malva-oscuro); /* Blanco */
+    font-size: 3.5rem; /* Tamaño base para celular */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.evento {
+    font-family: 'Great Vibes', cursive;
+    color: #ba9a30; /* #D4AF37; /* Dorado */
+    font-size:8rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin: 0 0 1rem 0;
+}
+
+.tarjeta-fecha .fecha { /* Específico para la fecha de esta sección */
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF; /* Blanco */
+    font-size: 6rem; /* Se adapta mejor al celular para que no se corte la frase */
+    line-height: 1.1;
+    margin: 0;
+    /* Truco por si quieres que la cursiva se vea más gruesa y legible */
+    -webkit-text-stroke: 1px #FFFFFF; 
+}
+
+/* Contenedor del icono (por si pones algo dentro luego) */
+.contenedor-fecha-icono {
+    margin-top: 20px;
+}
+/* Configuración de la sección principal */
+.tarjeta-responsive-full {
+    /* Cargamos tu imagen directamente como fondo */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),url('https://i.postimg.cc/y62KhV66/fondo2.jpg');
+  /* 2. SOLUCIÓN: Estira la imagen para cubrir el 100% del ancho y 100% del alto,
+       forzándola a ocupar toda la pantalla del dispositivo sin dejar bordes vacíos */
+    background-size: 100% 100%;
     
-    <style>
-    /* --- CONFIGURACIÓN BASE --- */
-    body, html {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        background-color: #A3B19B;
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    /* Forzar que cada sección principal ocupe exactamente el alto de la pantalla */
-    section {
-        min-height: 100vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
-        padding: 20px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    /* --- SECCIÓN 1: BIENVENIDA --- */
-    .tarjeta-responsive-full {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://i.postimg.cc/y62KhV66/fondo2.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    .subtituloI {
-        font-family: 'Montserrat', sans-serif;
-        color: #D4AF37;
-        font-size: 8vw; /* Proporcional al ancho de pantalla */
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        text-align: center;
-        margin: 0;
-        z-index: 10;
-    }
-
-    .fechaI {
-        font-family: 'Great Vibes', cursive;
-        color: #FFFFFF;
-        font-size: 18vw; /* Letra fluida gigante para celular */
-        line-height: 0.9;
-        margin: 10px 0 0 0;
-        text-align: center;
-        font-weight: 300;
-        z-index: 10;
-    }
+    /* 3. Ajustes de repetición y posición */
+    background-repeat: no-repeat;
+    background-position: center center;
     
-    /* --- SECCIÓN 2: INVITACIÓN --- */
-    .tarjeta-fecha {
-        background-color: #A3B19B;
-    }
-
-    .texto-fecha {
-        text-align: center;
-        z-index: 2;
-        width: 100%;
-        max-width: 600px;
-    }
-
-    .titulo-invitacion {
-        color: #FFFFFF;
-        font-size: 1.8rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin: 0 0 10px 0;
-        line-height: 1.2;
-    }
+    /* 4. Dimensiones totales de la pantalla */
+    height: 100vh; 
+    width: 100vw;  
     
-    .titulo-invitacion1 {
-        color: #FFFFFF;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin: 20px 0 0 0;
-        line-height: 1.2;
+    /* 5. Centrado de los textos (Mis XV / Catalina) */
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    
+    /* 6. Caja de control */
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Capa oscura opcional (Overlay) para asegurar que las letras blancas se lean perfectamente */
+.tarjeta-responsive-full::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35); /* Capa negra con 35% de opacidad, quítala o bájala si la foto ya es oscura */
+    z-index: 1;
+}
+
+/* El bloque que contiene el nombre y "Mis XV" */
+.seccion-texto {
+    position: relative;
+    z-index: 2; /* Lo posiciona por encima de la capa oscura */
+    text-align: center;
+    color: #ffffff; /* Texto en blanco para contrastar con el fondo */
+    padding: 0 20px;
+}
+
+/* Estilos responsivos para los textos */
+.subtitulo {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.fecha {
+    font-size: 4.5rem; /* Letra grande para escritorio */
+    margin: 0;
+    font-weight: 700;
+    line-height: 1;
+}
+/* ==========================================
+   ESTILOS PARA LAS LUCIÉRNAGAS (Animación)
+   ========================================== */
+.luciernagas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Evita que interfiera si el usuario hace clic */
+    z-index: 1;
+}
+
+.firefly {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #FFFDD0; /* Color crema/amarillo brillante */
+    border-radius: 50%;
+    box-shadow: 0 0 10px #D4AF37, 0 0 20px #D4AF37;
+    animation: flotar infinite ease-in-out;
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
+    50% { transform: translateY(-40px) scale(1.5); opacity: 1; }
+}
+
+/* ==========================================
+   ESTILOS PARA LA TARJETA CONTADOR
+   ========================================== */
+.tarjeta-contador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%; /* Alto completo de la ventana */
+    width: 100%;
+    height:100%;
+    
+    /* Configuración de la imagen de fondo con capa de oscurecimiento (opcional pero recomendada) linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), */
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://drive.google.com/file/d/1l4TCp54LmQ1P46gAO1hO1OEPQgm0qY0T');*/
+   
+   /*background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://drive.google.com/thumbnail?sz=w1920&id=1B5L4WB1mFAGb9Ox1pytFZFQtQ0Q65n-j');*/
+/* background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://drive.google.com/thumbnail?sz=w1920&id=1l4TCp54LmQ1P46gAO1hO1OEPQgm0qY0T');*/
+background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://i.postimg.cc/C1zxRyFj/Whats-App-Image-2026-06-23-at-22-35-57-(1).jpg');
+    background-size: cover;       /* Hace que la imagen ocupe TODA la sección sin deformarse */
+    background-position: center;  /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se duplique como mosaico */
+    
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* El texto "Faltan" */
+.tarjeta-contador .fecha {
+    
+    font-family: 'Great Vibes', cursive;
+    color: #FFFFFF;
+    font-size: 12rem; 
+    margin: 0 0 1rem 0;
+    line-height: 1;
+    -webkit-text-stroke: 1px #FFFFFF;
+    margin-bottom: 4rem;
+    font-weight: 300;
     }
 
-    .evento {
-        font-family: 'Great Vibes', cursive;
-        color: #ba9a30;
-        font-size: 4rem;
-        font-weight: 700;
-        letter-spacing: 2px;
-        margin: 15px 0;
-    }
+/* Contenedor principal que alinea los bloques de lado a lado */
+.cuenta-regresiva {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea los elementos arriba para controlar los puntos */
+    gap: 15px; 
+    text-align: center;
+}
 
-    /* Animación Luciérnagas */
-    .luciernagas-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 1;
-    }
+.bloque-tiempo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .firefly {
-        position: absolute;
-        width: 5px;
-        height: 5px;
-        background-color: #FFFDD0;
-        border-radius: 50%;
-        box-shadow: 0 0 10px #D4AF37;
-        animation: flotar infinite ease-in-out;
-    }
+.numero {
+    font-size: 4.5rem; 
+    font-weight: bold;
+    color: #ffffff; 
+    line-height: 1;
+}
 
-    @keyframes flotar {
-        0%, 100% { transform: translateY(0) scale(1); opacity: 0.2; }
-        50% { transform: translateY(-30px) scale(1.3); opacity: 0.8; }
-    }
+.etiqueta {
+    font-size:2 rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 8px;
+    letter-spacing: 1px;
+}
 
-    /* --- SECCIÓN 3: CONTADOR --- */
-    .tarjeta-contador {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://i.postimg.cc/C1zxRyFj/Whats-App-Image-2026-06-23-at-22-35-57-(1).jpg');
-        background-size: cover;       
-        background-position: center;  
-        background-repeat: no-repeat; 
-        text-align: center;
-    }
+/* 💻 ESTILO EXCLUSIVO PARA LOS DOS PUNTOS */
+.separador {
+    font-size: 4.5rem; /* Tamaño similar al de tus números */
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1;
+    padding-top: 2px; /* Pequeño ajuste para centrarlos visualmente con los números */
+}
 
-    .marco {
-        background-color: rgba(255, 255, 255, 0.15);
-        padding: 30px 20px;
-        border-radius: 15px;
-        width: 90%;
-        max-width: 500px;
-        backdrop-filter: blur(5px);
-        box-sizing: border-box;
-    }
+.marco{ /* Fondo blanco translúcido */
+    background-color: rgba(255, 255, 255, 0.2); /* 0.2 es el 20% de opacidad */
+    padding: 60px 60px; /* Espaciado interno para que el fondo no pegue a las letras */
+    border-radius: 15px; /* Bordes suaves y redondeados */
+    display: inline-block; /* Hace que el fondo ocupe solo el ancho del texto y no toda la pantalla */
+    backdrop-filter: blur(5px); /* Opcional: difumina sutilmente la imagen detrás del cartelito */}
 
-    .tarjeta-contador .fecha {
-        font-family: 'Great Vibes', cursive;
-        color: #FFFFFF;
-        font-size: 4.5rem; 
-        margin: 0 0 20px 0;
-        line-height: 1;
-    }
 
-    .cuenta-regresiva {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px; 
-    }
 
-    .bloque-tiempo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-width: 55px;
-    }
+/* Ajuste para celulares */
+@media (max-width: 480px) {
+    .cuenta-regresiva { gap: 10px; }
+    .numero { font-size: 2rem; }
+    .etiqueta { font-size: 0.75rem; }
+}
+/* ==========================================
+   ESTILOS PARA LA TARJETA LUGAR
+   ========================================== */
+.tarjeta-lugar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Alto completo de la ventana */
+    width: 100%;
+    background-color: #98AC9F; /* Verde Malva intermedio/grisáceo */
+    padding: 30px 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
 
-    .numero {
-        font-size: 2.2rem; 
-        font-weight: bold;
-        color: #ffffff; 
-        line-height: 1;
-    }
+/* El texto principal "Lugar" */
+.etiqueta-lugar {
+    font-family: 'Great Vibes', cursive;
+    color: #FFFFFF; /* Blanco */
+    font-size: 6rem; /* Tamaño grande y elegante */
+    margin: 0 0 1rem 0;
+    line-height: 1;
+    -webkit-text-stroke: 1px #FFFFFF;
+}
 
-    .etiqueta {
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.8);
-        margin-top: 5px;
-        letter-spacing: 1px;
-    }
+/* Nombre del Salón */
+.nombre-salon {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF; /* Blanco */
+    font-size: 4.2rem; /* Adaptado para que no se rompa feo en celular */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.3;
+    margin: 0 0 1.5rem 0;
+    max-width: 90%; /* Evita que choque con los bordes de la pantalla */
+}
 
-    .separador {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #ffffff;
-        line-height: 1;
-        margin-bottom: 20px; /* Alineación con los números */
-    }
+/* La hora */
+.ubicacion {
+    font-family: 'Montserrat', sans-serif;
+    color: #2A523B; /* #D4AF37; Dorado */
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin: 0 0 2.5rem 0;
+}
 
-    /* --- SECCIÓN 4: LUGAR --- */
-    .tarjeta-lugar {
-        background-color: #98AC9F;
-        text-align: center;
-    }
+/* El botón del icono de ubicación (GPS) */
+.tarjeta-lugar a {
+    color: #D4AF37 !important; /* Forzamos el color Dorado para el icono */
+    font-size: 4.5rem !important; /* Más grande para que sea fácil presionar con el dedo */
+    margin-top: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+    
+    /* Efecto de fondo circular sutil para que parezca un botón */
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 35px 42px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
 
-    .etiqueta-lugar {
-        font-family: 'Great Vibes', cursive;
-        color: #FFFFFF;
-        font-size: 4.5rem;
-        margin: 0 0 10px 0;
-        line-height: 1;
-    }
+/* Animación cuando presionan o pasan el cursor sobre el icono */
+.tarjeta-lugar a:hover {
+    transform: scale(1.15);
+    color: #FFFFFF !important; /* Cambia a blanco al interactuar */
+    background-color: rgba(214, 175, 55, 0.3); /* Fondo dorado semitransparente */
+}
+/* ==========================================
+   ESTILOS PARA LA TARJETA MÚSICA
+   ========================================== */
+.tarjeta-musica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Alto completo de la ventana */
+    width: 100%;
+    background-color: #7A8E80; /* El Verde Malva más oscuro y elegante */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative; /* Esencial para que las notas floten dentro */
+    overflow: hidden;
+}
 
-    .nombre-salon {
-        color: #FFFFFF;
-        font-size: 1.8rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        line-height: 1.3;
-        margin: 0 0 15px 0;
-        max-width: 90%;
-    }
+.contenido-musica {
+    z-index: 2; /* Mantiene el texto y botón por encima de las notas */
+    width: 100%;
+    max-width: 500px;
+}
 
-    .ubicacion {
-        color: #2A523B;
-        font-size: 2rem;
-        font-weight: 300;
-        letter-spacing: 2px;
-        margin: 0 0 30px 0;
-    }
+/* El texto de la música */
+.texto-musica {
+    font-family: 'Great Vibes', cursive;
+    color: #FFFFFF;
+    font-size: 4.5rem; /* Tamaño grande y fluido */
+    line-height: 1.2;
+    margin: 0 0 3rem 0;
+    -webkit-text-stroke: 1px #FFFFFF;
+    font-weight: 300;
+}
 
-    .tarjeta-lugar a {
-        color: #D4AF37 !important;
-        font-size: 2.5rem !important;
-        display: inline-block;
-        transition: transform 0.3s ease;
-        background-color: rgba(255, 255, 255, 0.15);
-        padding: 20px 25px;
-        border-radius: 50%;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
+/* El Botón "Sugerime una canción" */
+.btn-sugerir {
+    font-family: 'Montserrat', sans-serif;
+    color: #D4AF37 !important; /* Texto Dorado */
+    background-color: rgba(255, 255, 255, 0.08); /* Fondo sutil */
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    
+    padding: 38px 35px;
+    border: 2px solid #D4AF37; /* Borde Dorado */
+    border-radius: 50px; /* Completamente redondeado estilo píldora */
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
 
-    /* --- SECCIÓN 5: PLAYLIST --- */
-    .tarjeta-playlist {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://i.postimg.cc/c1zd55sn/playlist.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        text-align: center;
-    }
+/* Animación Interactiva del Botón */
+.btn-sugerir:hover {
+    color: #7A8E80 !important; /* Cambia al color de fondo */
+    background-color: #D4AF37; /* Se llena de dorado */
+    transform: translateY(-4px); /* Pequeño salto hacia arriba */
+    box-shadow: 0 8px 25px rgba(214, 175, 55, 0.4);
+}
 
-    .contenido-playlist {
-        width: 100%;
-        max-width: 450px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+/* ==========================================
+   ESTILOS PARA LA TARJETA COSTO (ACTUALIZADO)
+   ========================================== */
+.tarjeta-costo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Pantalla completa */
+    width: 100%;
+    background-color: #6C7F72; /* Verde Malva profundo */
+    padding: 30px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative; 
+    overflow: hidden;   
+}
 
-    .titulo-playlist {
-        font-family: 'Great Vibes', cursive;
-        color: #FFFFFF;
-        font-size: 5rem;
-        margin: 0 0 10px 0;
-        line-height: 1;
-    }
+/* Contenedor del texto */
+.contenido-costo {
+    z-index: 5;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Un poco más de espacio entre bloques */
+}
 
-    .frase-playlist {
-        color: #FFFFFF;
-        font-size: 1.1rem;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin: 0 0 30px 0;
-        line-height: 1.4;
-        font-weight: 300;
-    }
+/* Textos informativos menores - ¡AHORA MÁS GRANDES! */
+.tarjeta-costo .detalle {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    font-size: 1.8rem; /* Aumentado significativamente para celulares */
+    font-weight: 400;  /* Un toque más de grosor para mejor lectura */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.5;
+    max-width: 95%;
+    padding:30px;
+}
 
-    .btn-playlist {
-        font-family: 'Montserrat', sans-serif;
-        color: #D4AF37 !important;
-        background-color: rgba(255, 255, 255, 0.08);
-        font-size: 1.2rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        text-decoration: none;
-        padding: 15px 30px;
-        border: 2px solid #D4AF37;
-        border-radius: 50px;
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
+.tarjeta-costo .detalle1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    font-size: 3.5rem; /* Aumentado significativamente para celulares */
+    font-weight: 400;  /* Un toque más de grosor para mejor lectura */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.5;
+    max-width: 95%;
+    padding:30px;
+}
+/* El Precio destacado - SE MANTIENE IGUAL */
+.tarjeta-costo .precio {
+    font-family: 'Montserrat', sans-serif;
+    color: #D4AF37; 
+    font-size: 3.1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0 0 1rem 0;
+}
 
-    .btn-playlist:hover {
-        color: #000000 !important;
-        background-color: #D4AF37;
-    }
+/* Botón de Confirmación */
+.btn-confirmar {
+    font-family: 'Montserrat', sans-serif;
+    color: #D4AF37 !important;
+    background-color: rgba(255, 255, 255, 0.08);
+    font-size: 4.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 48px 35px;
+    border: 2px solid #D4AF37;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    margin-bottom: 2rem;
+}
 
-    /* --- SECCIÓN 6: DRESS CODE --- */
-    .tarjeta-dresscode {
-        background-color: #7A8E80; /* Color de fondo por defecto si no hay carrusel activo */
-    }
+.btn-confirmar:hover {
+    
+    color: #6C7F72 !important;
+    background-color: #D4AF37;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(214, 175, 55, 0.4);
+}
 
-    .capa-titulo-dresscode {
-        text-align: center;
-        width: 85%;
-        max-width: 400px;
-        background-color: rgba(255, 255, 255, 0.2);
-        padding: 20px;
-        border-radius: 15px;
-        backdrop-filter: blur(8px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        z-index: 10;
-    }
+/* Firma "Catalina" - ¡AHORA MÁS GRANDE! */
+.tarjeta-costo .fecha {
+    font-family: 'Great Vibes', cursive;
+    color: #FFFFFF;
+    font-size: 7.5rem; /* Aumentado para que tenga un impacto hermoso */
+    margin: 0;
+    line-height: 1;
+    -webkit-text-stroke: 1px #FFFFFF;
+    padding:70px;
+}
 
-    .capa-titulo-dresscode h2 {
-        color: #FFFFFF;
-        font-size: 1.3rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin: 0;
-    }
+/* ==========================================
+   LUCIÉRNAGAS SEGUNDO PLANO (MÁS APAGADAS)
+   ========================================== */
+.tarjeta-costo::before,
+.tarjeta-costo::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
 
-    .resalte-elegante {
-        color: #FFFFFF;
-        font-size: 2.5rem;
-        display: block;
-        margin-top: 5px;
-        -webkit-text-stroke: 0.5px #D4AF37;
-    }
+/* Capa de luciérnagas 1 (Opacidad máxima reducida a 0.4) */
+.tarjeta-costo::before {
+    background-image: 
+        radial-gradient(circle, rgba(214, 175, 55, 0.4) 10%, transparent 11%),
+        radial-gradient(circle, rgba(214, 175, 55, 0.3) 8%, transparent 9%),
+        radial-gradient(circle, rgba(214, 175, 55, 0.4) 12%, transparent 13%);
+    background-size: 250px 250px;
+    background-position: 0 0, 40px 120px, 150px 30px;
+    animation: luciernagasFlotan 14s linear infinite; /* Movimiento un poco más lento y suave */
+}
 
-    /* ==========================================
-       MEDIA QUERY: DISPOSITIVOS GRANDES (PC / TABLET)
-       ========================================== */
-    @media (min-width: 768px) {
-        .subtituloI { font-size: 3.5rem; }
-        .fechaI { font-size: 4rem; }
-        .titulo-invitacion { font-size: 3.5rem; }
-        .titulo-invitacion1 { font-size: 2.5rem; }
-        .evento { font-size: 6rem; }
-        .tarjeta-contador .fecha { font-size: 4rem; }
-        .marco { padding: 50px; max-width: 650px; }
-        .numero { font-size: 4rem; }
-        .etiqueta { font-size: 1.2rem; }
-        .separador { font-size: 3.5rem; margin-bottom: 30px; }
-        .cuenta-regresiva { gap: 20px; }
-        .bloque-tiempo { min-width: 90px; }
-        .etiqueta-lugar { font-size: 4rem; }
-        .nombre-salon { font-size: 3rem; }
-        .ubicacion { font-size: 3.5rem; }
-        .tarjeta-lugar a { font-size: 3.5rem !important; padding: 25px 30px; }
-        .titulo-playlist { font-size: 4rem; }
-        .frase-playlist { font-size: 1.8rem; }
-        .btn-playlist { font-size: 1.5rem; padding: 20px 40px; }
-        .capa-titulo-dresscode { max-width: 550px; padding: 30px; }
-        .capa-titulo-dresscode h2 { font-size: 1.8rem; }
-        .resalte-elegante { font-size: 3.8rem; }
+/* Capa de luciérnagas 2 (Opacidad máxima reducida a 0.3) */
+.tarjeta-costo::after {
+    background-image: 
+        radial-gradient(circle, rgba(214, 175, 55, 0.3) 9%, transparent 10%),
+        radial-gradient(circle, rgba(214, 175, 55, 0.2) 11%, transparent 12%);
+    background-size: 300px 300px;
+    background-position: 100px 150px, 200px 80px;
+    animation: luciernagasFlotanAlterno 20s linear infinite;
+}
+
+/* Animaciones controladas para que el parpadeo sea casi imperceptible */
+@keyframes luciernagasFlotan {
+    0% { transform: translate(0, 0); opacity: 0.1; }
+    25% { opacity: 0.4; }
+    50% { transform: translate(20px, -30px); opacity: 0.2; }
+    75% { opacity: 0.4; }
+    100% { transform: translate(0, -60px); opacity: 0.1; }
+}
+
+@keyframes luciernagasFlotanAlterno {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.1; }
+    33% { opacity: 0.3; transform: translate(-15px, -15px) scale(1.05); }
+    66% { opacity: 0.1; transform: translate(10px, -40px) scale(0.95); }
+    100% { transform: translate(0, -80px) scale(1); opacity: 0.1; }
+}
+
+/* ==========================================
+   ESTILOS PARA LA TARJETA DRESS CODE
+   ========================================== */
+.tarjeta-dresscode {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la pantalla */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Título superpuesto en el centro superior */
+.capa-titulo-dresscode {
+    position: absolute;
+    top: 10%; /* Lo ubica elegantemente arriba */
+    z-index: 10; /* Por encima de las imágenes */
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    
+    /* Fondo translúcido blanco para que el texto resalte */
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo de la tipografía del título */
+.capa-titulo-dresscode h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+/* Palabra "Elegante" en cursiva destacada */
+.resalte-elegante {
+    font-family: 'Montserrat', sans-serif;
+
+    color:  #FFFFFF /*#D4AF37; /* Dorado */
+    font-size: 3.5rem;
+    text-transform: none; /* Evita las mayúsculas en la cursiva */
+    letter-spacing: 0;
+    display: block; /* Baja a la siguiente línea con elegancia */
+    margin-top: 5px;
+    -webkit-text-stroke: 0.5px #D4AF37;
+}
+
+/* ==========================================
+   CARRUSEL AUTOMÁTICO DE 2 IMÁGENES
+   ========================================== */
+.carrusel-contenedor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Estilo común para ambas imágenes de fondo */
+.carrusel-imagen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0; /* Empiezan invisibles */
+    transition: opacity 1.5s ease-in-out; /* Transición suave de fundido */
+    animation: cambiarFondo 10s infinite; /* Animación en bucle de 10 segundos */
+}
+
+/* Desfase de tiempos para lograr el intercambio constante */
+.carrusel-imagen:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.carrusel-imagen:nth-child(2) {
+    animation-delay: 5s; /* Se activa exactamente a la mitad del ciclo */
+}
+
+/* Cronología de la animación para 2 imágenes */
+@keyframes cambiarFondo {
+    0%, 45% {
+        opacity: 1; /* Imagen visible */
+        transform: scale(1);
     }
-    </style>
+    50%, 95% {
+        opacity: 0; /* Imagen invisible mientras la otra se muestra */
+        transform: scale(1.03); /* Leve efecto zoom para dar dinamismo */
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ==========================================
+   ESTILOS PARA LA TARJETA PLAYLIST
+   ========================================== */
+.tarjeta-playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    justify-content: flex-end;
+    min-height: 100vh; /* Alto completo */
+    width: 100%;
+    
+    /* Imagen de fondo con capa oscura (puedes cambiar el ID por la foto que quieras) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('https://i.postimg.cc/c1zd55sn/playlist.jpg');
+   /* background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://drive.google.com/thumbnail?sz=w1920&id=1sjOxEnZc9A8SIXz9MHVbkQHh2Rjd2P-s');*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    padding: 30px 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.contenido-playlist {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:100px;
+}
+
+/* Título estilizado en cursiva grande */
+.titulo-playlist {
+    font-family: 'Great Vibes', cursive;
+    color: #FFFFFF;
+    font-size: 6rem;
+    margin: 0 0 1rem 0;
+    line-height: 1;
+    
+    font-weight: 100;
+}
+
+/* Frase secundaria en Montserrat */
+.frase-playlist {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 3.5rem 0;
+    line-height: 1.4;
+       /* Hace la letra lo más delgada posible */
+    font-weight: 300;
+}
+
+/* Botón estilizado tipo píldora */
+.btn-playlist {
+    margin-top:20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #D4AF37 !important; /* Texto Dorado */
+    background-color: rgba(255, 255, 255, 0.08);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    
+    padding:  28px 35px;
+    border: 2px solid #D4AF37; /* Borde Dorado */
+    border-radius: 50px;.tarjeta-playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+…    color: #000000 !important; /* El texto pasa a negro para contrastar */
+    background-color: #D4AF37; /* Se llena de dorado */
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(214, 175, 55, 0.4);
+    margin-bottom:100px;
+    margin-top:10px;
+}
+
+
+
+/* ==========================================
+   ESTILOS PARA EL INPUT (CAJA DE TEXTO)
+   ========================================== */
+.form-busqueda input[type="text"] {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.1);
+    
+    /* TAMAÑO GIGANTE CONTROLADO */
+    font-size: 2.5rem; /* Un tamaño grande, elegante y ultra legible */
+    padding: 25px 20px; /* Le da mucha altura y presencia a la caja */
+    width: 100%;
+    max-width: 400px;
+    
+    /* Bordes y diseño */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50px; /* Bordes redondeados tipo píldora, igual que tus botones */
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Estilo del texto de sugerencia (Placeholder) */
+.form-busqueda input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.6rem; /* Al ser mayor o igual a 16px, previene el zoom de base */
+}
+
+/* Cuando el usuario hace clic para escribir */
+.form-busqueda input[type="text"]:focus {
+    border-color: #D4AF37;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 15px rgba(214, 175, 55, 0.4);
+}
+
+
+/* ==========================================
+   Media Queries para pantallas grandes (PC)
+   ========================================== */
+@media (min-width: 768px) {
+    .titulo-invitacion { font-size: 4rem; }
+    .evento { font-size: 4.8rem; }
+    .tarjeta-fecha .fecha { font-size: 8.5rem; }
+     .contenedor-foto {
+          max-width: 800px;
+          height: 80vh;
+      }
+      .fecha { font-size: 12rem; }
+      .tarjeta-contador .fecha { font-size: 12rem; }
+    .numeros-contador { font-size: 3.5rem; letter-spacing: 5px;}
+    .etiqueta-lugar { font-size: 8rem; }
+    .nombre-salon { font-size: 3.5rem; letter-spacing: 5px; }
+    .ubicacion { font-size: 5.5rem; }
+    
+    .texto-musica { font-size: 6rem; }
+    .btn-sugerir { font-size: 1.4rem; padding: 20px 45px; }
+    .notas-musicales span { font-size: 4rem; }
+     
+    .tarjeta-costo .precio { font-size: 4.5rem; } /* Se mantiene igual en PC */
+    .tarjeta-costo .detalle { font-size: 3.2rem; } /* Más grande en PC */
+    .tarjeta-costo .detalle1 { font-size: 3.2rem; } /* Más grande en PC */
+    .tarjeta-costo .fecha { font-size: 8.5rem; } /* Más grande en PC */
+    .btn-confirmar { font-size: 3.4rem; padding: 20px 45px; }
+    .capa-titulo-dresscode h2 { font-size: 2.2rem; }
+    .resalte-elegante { font-size: 4.5rem; display: inline; margin-left: 10px; }
+    .capa-titulo-dresscode { max-width: 700px; padding: 20px 40px; top: 12%; }
+     .titulo-playlist { font-size: 9.5rem; }
+    .frase-playlist { font-size: 2.2rem; }
+    .btn-playlist { font-size: 1.4rem; padding: 20px 45px; }
+    .form-busqueda input[type="text"] {
+        font-size: 3.8rem; /* Aún más grande en computadora */
+        padding: 20px 30px;
+    }
+    .contenido_playlist{padding:100px;}
+}
+
+
+
+
+</style>
   </head>
 
   <body>
 
-    <section class="tarjeta-responsive-full">
+   <section class="tarjeta-responsive-full">
+ 
         <div class="subtituloI">Mis XV</div>
         <h1 class="fechaI">Catalina</h1>   
-    </section>
+   
+</section>
 
     <section class="tarjeta-fecha">
+
       <div class="luciernagas-container">
         <script>
-          for(let i=0; i<25; i++) { /* Reducido a 25 para fluidez en celulares */
-            document.write(`<div class="firefly" style="top: ${Math.random()*100}%; left: ${Math.random()*100}%; animation-duration: ${5 + Math.random()*8}s;"></div>`);
+          for(let i=0; i<40; i++) {
+            document.write(`<div class="firefly" style="top: ${Math.random()*100}%; left: ${Math.random()*100}%; animation-duration: ${5 + Math.random()*10}s;"></div>`);
           }
         </script>
       </div>
@@ -378,39 +944,42 @@
         <p class="titulo-invitacion">mis quince</p>
         <p class="evento"> ~ Sábado ~</p>
         <p class="titulo-invitacion1">17 de octubre de 2026</p>
-      </div>
+        <div class="contenedor-fecha-icono" style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+ 
+   
+
     </section>
 
     <section class="tarjeta-contador">
       <div class="marco">  
         <p class="fecha">Faltan</p>
         <div class="cuenta-regresiva">
-            <div class="bloque-tiempo">
-                <span id="dias" class="numero">00</span>
-                <span class="etiqueta">Días</span>
-            </div>
-            
-            <div class="separador">:</div>
+    <div class="bloque-tiempo">
+        <span id="dias" class="numero">00</span>
+        <span class="etiqueta">Días</span>
+    </div>
+    
+    <div class="separador">:</div>
 
-            <div class="bloque-tiempo">
-                <span id="horas" class="numero">00</span>
-                <span class="etiqueta">Hs</span>
-            </div>
-            
-            <div class="separador">:</div>
+    <div class="bloque-tiempo">
+        <span id="horas" class="numero">00</span>
+        <span class="etiqueta">Hs</span>
+    </div>
+    
+    <div class="separador">:</div>
 
-            <div class="bloque-tiempo">
-                <span id="minutos" class="numero">00</span>
-                <span class="etiqueta">Min</span>
-            </div>
-            
-            <div class="separador">:</div>
+    <div class="bloque-tiempo">
+        <span id="minutos" class="numero">00</span>
+        <span class="etiqueta">Min</span>
+    </div>
+    
+    <div class="separador">:</div>
 
-            <div class="bloque-tiempo">
-                <span id="segundos" class="numero">00</span>
-                <span class="etiqueta">Seg</span>
-            </div>
-        </div>
+    <div class="bloque-tiempo">
+        <span id="segundos" class="numero">00</span>
+        <span class="etiqueta">Seg</span>
+    </div>
+</div>
       </div>
     </section>
 
@@ -418,39 +987,1226 @@
         <p class="etiqueta-lugar">Lugar</p>
         <p class="nombre-salon">Salón de la Cooperativa de Monte Cristo </p>
         <p class="ubicacion">21.00 horas</p>
-        <a href="https://maps.google.com" target="_blank">
+        <a href="https://maps.app.goo.gl/S8aYkjZUzFG6ZqDV6"
+            target="_blank" >
             <i class="fa-solid fa-location-dot"></i>
         </a>
     </section>
     
-    <section class="tarjeta-playlist">
-        <div class="contenido-playlist">
-            <h2 class="titulo-playlist">Playlist</h2>
-            <p class="frase-playlist">¿Qué canción no puede faltar?</p>
-            <div class="form-busqueda">
-                <button type="button" id="btn-abrir-playlist" class="btn-playlist">Agregar Canción</button>
-            </div>
+    <!-- ==========================================
+     SECCIÓN PLAYLIST / MÚSICA
+     ========================================== -->
+
+<section class="tarjeta-playlist">
+    <div class="contenido-playlist">
+        <h2 class="titulo-playlist">Playlist</h2>
+        <p class="frase-playlist">¿Qué canción no puede faltar?</p>
+        
+        <div class="form-busqueda">
+            <button type="button" id="btn-abrir-playlist" class="btn-playlist">Agregar Canción</button>
         </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const botonAbrir = document.getElementById('btn-abrir-playlist');
+    
+    // Tu link oficial del formulario (el que me pasaste al principio)
+    const urlGoogleForm = "https://docs.google.com/forms/d/e/1FAIpQLSc07-fjfWCzl4Kdb3WLG-MLhdHZsO5xrn4kmNh_PG3g8FCVgg/viewform?usp=sharing";
+
+    if (botonAbrir) {
+        botonAbrir.addEventListener('click', function() {
+            // Abre el formulario de Google en una pestaña nueva del navegador
+            window.open(urlGoogleForm, '_blank');
+        });
+    }
+});
+</script>
+
+
+   <section class="tarjeta-dresscode">
+    <div class="capa-titulo-dresscode">
+       <h2>Dress Code: <span class="resalte-elegante">Elegante</span></h2>
+    </div>
+
+    <div class="carrusel-contenedor">
+        <!-- <div class="carrusel-imagen" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://drive.google.com/thumbnail?sz=w1920&id=1C1mh1_p2z3mrFyKU-cM5OJvYkipF0iXX');"></div>-->
+        <div class="carrusel-imagen" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://i.postimg.cc/T2bTFJh5/dresscode-H.png');"></div>
+        <div class="carrusel-imagen" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(' https://i.postimg.cc/66c3k7kP/dresscode-M.png');"></div>
+       
+    </div>
     </section>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const botonAbrir = document.getElementById('btn-abrir-playlist');
-        const urlGoogleForm = "https://docs.google.com/forms/d/e/1FAIpQLSc07-fjfWCzl4Kdb3WLG-MLhdHZsO5xrn4kmNh_PG3g8FCVgg/viewform?usp=sharing";
+    <!-- Modal para los modelos -->
+    <div id="modal-vestimenta" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModelo()">&times;</span>
+       <!-- <h3 id="titulo-modal">Dress Code</h3>-->
+        <p id="texto-modelo"></p>
+    </div>
+    </div>
 
-        if (botonAbrir) {
-            botonAbrir.addEventListener('click', function() {
-                window.open(urlGoogleForm, '_blank');
-            });
-        }
-    });
-    </script>
+    <section class="tarjeta-costo">
+        <div class="contenido-costo">
+            <p class="fecha1">Tu presencia es importante para mí</p>
+            
+            <p class="detalle">Valor de la tarjeta:</p>
+            <p class="precio">$40.000</p>
+            
+            <a href="https://forms.gle/NoFfV3Tp53mkrJhK6" class="btn-confirmar">
+            Confirmá tu asistencia
+            </a>
 
-    <section class="tarjeta-dresscode">
-        <div class="capa-titulo-dresscode">
-           <h2>Dress Code: <span class="resalte-elegante">Elegante</span></h2>
+            <p class="detalle1"> te espero!</p>
+           
+            <p class="fechaf">Caty</p>   
+
         </div>
+
+
+     
     </section>
 
   </body>
-</html>
+  </html>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+ 
+    const fechaEvento = new Date("Oct 17, 2026 00:00:00").getTime();
+    const x = setInterval(function() {
+        const ahora = new Date().getTime();
+        const distancia = fechaEvento - ahora;
+
+        // Cálculos matemáticos para días, horas, minutos y segundos
+        const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+        // Función auxiliar para agregar el cero a la izquierda si es necesario
+        const formatear = (num) => num < 10 ? "0" + num : num;
+
+        // Inyectamos los valores en los elementos correspondientes
+        document.getElementById("dias").innerText = formatear(dias);
+        document.getElementById("horas").innerText = formatear(horas);
+        document.getElementById("minutos").innerText = formatear(minutos);
+        document.getElementById("segundos").innerText = formatear(segundos);
+
+        // Si la cuenta regresiva termina
+        if (distancia < 0) {
+            clearInterval(x);
+            document.querySelector(".cuenta-regresiva").innerHTML = "<h3>¡Llegó el día!</h3>";
+        }
+    }, 1000);
+});
+</script><!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mis 15 Caty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <style>
+  /* Importar fuentes */
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap');
+
+  body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+  }
+
+  
+
+ 
+  
+
+  .seccion-texto {
+        padding: 10px 10px; /* Reducido drásticamente de 80px a 10px */
+        text-align: center;
+        color: white;
+        margin-top: -20px; /* Acercamos el texto a la foto */
+      }
+
+  .subtitulo {
+      font-family: 'Montserrat', sans-serif;
+      color: #D4AF37;
+      font-size: 5.5rem; /* Ajustado para que no sea excesivamente grande y ocupe espacio */
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      text-align: center;
+      margin: 1.1rem;
+      /*font-weight: bold;*/
+  }
+
+  .fecha { /* Catalina */
+      font-family: 'Great Vibes', cursive;
+      color: #FFFFFF;
+      font-size: 9rem;
+      line-height: 0.8; /* Reduce el espacio vertical de la línea */
+      margin: 3.1rem;
+      text-align:center;
+      text-align: center;
+      /* Hace la letra lo más delgada posible */
+    font-weight: 300;
+  }.fechaf { /* Catalina */
+      font-family: 'Great Vibes', cursive;
+      color: #FFFFFF;
+      font-size: 6rem;
+      line-height: 0.8; /* Reduce el espacio vertical de la línea */
+      margin: 3.1rem;
+      text-align:center;
+      text-align: center;
+      /* Hace la letra lo más delgada posible */
+    font-weight: 300;
+  }
+  .fecha1 { /* Catalina */
+      font-family: 'Great Vibes', cursive;
+      color: #FFFFFF;
+      font-size: 6rem;
+      line-height: 0.8; /* Reduce el espacio vertical de la línea */
+      margin: 3.1rem;
+      text-align:center;
+      text-align: center;
+      /* Hace la letra lo más delgada posible */
+    font-weight: 300;
+  }
+.subtituloI {
+      font-family: 'Montserrat', sans-serif;
+      color: #D4AF37;
+      font-size: 8.5rem; /* Ajustado para que no sea excesivamente grande y ocupe espacio */
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      text-align: center;
+      margin: 1.1rem;
+      /*font-weight: bold;*/
+      /* 🚀 SOLUCIÓN: Rompe el filtro oscuro del contenedor */
+    position: relative;
+    z-index: 10;
+  }
+
+  .fechaI { /* Catalina */
+      font-family: 'Great Vibes', cursive;
+      color: #FFFFFF;
+      font-size: 8.5rem;
+      line-height: 0.8; /* Reduce el espacio vertical de la línea */
+      margin: 3.1rem;
+      text-align:center;
+      text-align: center;
+      /* Hace la letra lo más delgada posible */
+    font-weight: 300;
+    /* 🚀 SOLUCIÓN: Rompe el filtro oscuro del contenedor */
+    position: relative;
+    z-index: 10;
+
+  }
+  
+  /* Estilos para la Tarjeta de la Fecha */
+.tarjeta-fecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ocupa el alto completo de la ventana */
+    width: 100%;
+    background-color:  #A3B19B; /* Verde Malva más claro */
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* Necesario para que las luciérnagas no se descontrolen */
+    overflow: hidden;
+}
+
+/* Contenedor del texto para asegurar centrado */
+.texto-fecha {
+    text-align: center;
+    z-index: 2; /* Pone el texto por encima de las luciérnagas */
+    width: 100%;
+    max-width: 600px; /* Evita que el texto se estire demasiado en PC */
+}
+
+/* Estilos de los textos adaptables (Responsive) */
+.titulo-invitacion {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;/*var(--verde-malva-oscuro); /* Blanco */
+    font-size: 4.5rem; /* Tamaño base para celular */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+.titulo-invitacion1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;/*var(--verde-malva-oscuro); /* Blanco */
+    font-size: 3.5rem; /* Tamaño base para celular */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.evento {
+    font-family: 'Great Vibes', cursive;
+    color: #ba9a30; /* #D4AF37; /* Dorado */
+    font-size:8rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin: 0 0 1rem 0;
+}
+
+.tarjeta-fecha .fecha { /* Específico para la fecha de esta sección */
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF; /* Blanco */
+    font-size: 6rem; /* Se adapta mejor al celular para que no se corte la frase */
+    line-height: 1.1;
+    margin: 0;
+    /* Truco por si quieres que la cursiva se vea más gruesa y legible */
+    -webkit-text-stroke: 1px #FFFFFF; 
+}
+
+/* Contenedor del icono (por si pones algo dentro luego) */
+.contenedor-fecha-icono {
+    margin-top: 20px;
+}
+/* Configuración de la sección principal */
+.tarjeta-responsive-full {
+    /* Cargamos tu imagen directamente como fondo */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),url('https://i.postimg.cc/y62KhV66/fondo2.jpg');
+  /* 2. SOLUCIÓN: Estira la imagen para cubrir el 100% del ancho y 100% del alto,
+       forzándola a ocupar toda la pantalla del dispositivo sin dejar bordes vacíos */
+    background-size: 100% 100%;
+    
+    /* 3. Ajustes de repetición y posición */
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    /* 4. Dimensiones totales de la pantalla */
+    height: 100vh; 
+    width: 100vw;  
+    
+    /* 5. Centrado de los textos (Mis XV / Catalina) */
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    
+    /* 6. Caja de control */
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Capa oscura opcional (Overlay) para asegurar que las letras blancas se lean perfectamente */
+.tarjeta-responsive-full::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35); /* Capa negra con 35% de opacidad, quítala o bájala si la foto ya es oscura */
+    z-index: 1;
+}
+
+/* El bloque que contiene el nombre y "Mis XV" */
+.seccion-texto {
+    position: relative;
+    z-index: 2; /* Lo posiciona por encima de la capa oscura */
+    text-align: center;
+    color: #ffffff; /* Texto en blanco para contrastar con el fondo */
+    padding: 0 20px;
+}
+
+/* Estilos responsivos para los textos */
+.subtitulo {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.fecha {
+    font-size: 4.5rem; /* Letra grande para escritorio */
+    margin: 0;
+    font-weight: 700;
+    line-height: 1;
+}
+/* ==========================================
+   ESTILOS PARA LAS LUCIÉRNAGAS (Animación)
+   ========================================== */
+.luciernagas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Evita que interfiera si el usuario hace clic */
+    z-index: 1;
+}
+
+.firefly {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #FFFDD0; /* Color crema/amarillo brillante */
+    border-radius: 50%;
+    box-shadow: 0 0 10px #D4AF37, 0 0 20px #D4AF37;
+    animation: flotar infinite ease-in-out;
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
+    50% { transform: translateY(-40px) scale(1.5); opacity: 1; }
+}
+
+/* ==========================================
+   ESTILOS PARA LA TARJETA CONTADOR
+   ========================================== */
+.tarjeta-contador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%; /* Alto completo de la ventana */
+    width: 100%;
+    height:100%;
+    
+    /* Configuración de la imagen de fondo con capa de oscurecimiento (opcional pero recomendada) linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), */
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://drive.google.com/file/d/1l4TCp54LmQ1P46gAO1hO1OEPQgm0qY0T');*/
+   
+   /*background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://drive.google.com/thumbnail?sz=w1920&id=1B5L4WB1mFAGb9Ox1pytFZFQtQ0Q65n-j');*/
+/* background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://drive.google.com/thumbnail?sz=w1920&id=1l4TCp54LmQ1P46gAO1hO1OEPQgm0qY0T');*/
+background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://i.postimg.cc/C1zxRyFj/Whats-App-Image-2026-06-23-at-22-35-57-(1).jpg');
+    background-size: cover;       /* Hace que la imagen ocupe TODA la sección sin deformarse */
+    background-position: center;  /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se duplique como mosaico */
+    
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* El texto "Faltan" */
+.tarjeta-contador .fecha {
+    
+    font-family: 'Great Vibes', cursive;
+    color: #FFFFFF;
+    font-size: 12rem; 
+    margin: 0 0 1rem 0;
+    line-height: 1;
+    -webkit-text-stroke: 1px #FFFFFF;
+    margin-bottom: 4rem;
+    font-weight: 300;
+    }
+
+/* Contenedor principal que alinea los bloques de lado a lado */
+.cuenta-regresiva {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea los elementos arriba para controlar los puntos */
+    gap: 15px; 
+    text-align: center;
+}
+
+.bloque-tiempo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.numero {
+    font-size: 4.5rem; 
+    font-weight: bold;
+    color: #ffffff; 
+    line-height: 1;
+}
+
+.etiqueta {
+    font-size:2 rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 8px;
+    letter-spacing: 1px;
+}
+
+/* 💻 ESTILO EXCLUSIVO PARA LOS DOS PUNTOS */
+.separador {
+    font-size: 4.5rem; /* Tamaño similar al de tus números */
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1;
+    padding-top: 2px; /* Pequeño ajuste para centrarlos visualmente con los números */
+}
+
+.marco{ /* Fondo blanco translúcido */
+    background-color: rgba(255, 255, 255, 0.2); /* 0.2 es el 20% de opacidad */
+    padding: 60px 60px; /* Espaciado interno para que el fondo no pegue a las letras */
+    border-radius: 15px; /* Bordes suaves y redondeados */
+    display: inline-block; /* Hace que el fondo ocupe solo el ancho del texto y no toda la pantalla */
+    backdrop-filter: blur(5px); /* Opcional: difumina sutilmente la imagen detrás del cartelito */}
+
+
+
+/* Ajuste para celulares */
+@media (max-width: 480px) {
+    .cuenta-regresiva { gap: 10px; }
+    .numero { font-size: 2rem; }
+    .etiqueta { font-size: 0.75rem; }
+}
+/* ==========================================
+   ESTILOS PARA LA TARJETA LUGAR
+   ========================================== */
+.tarjeta-lugar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Alto completo de la ventana */
+    width: 100%;
+    background-color: #98AC9F; /* Verde Malva intermedio/grisáceo */
+    padding: 30px 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* El texto principal "Lugar" */
+.etiqueta-lugar {
+    font-family: 'Great Vibes', cursive;
+    color: #FFFFFF; /* Blanco */
+    font-size: 6rem; /* Tamaño grande y elegante */
+    margin: 0 0 1rem 0;
+    line-height: 1;
+    -webkit-text-stroke: 1px #FFFFFF;
+}
+
+/* Nombre del Salón */
+.nombre-salon {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF; /* Blanco */
+    font-size: 4.2rem; /* Adaptado para que no se rompa feo en celular */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.3;
+    margin: 0 0 1.5rem 0;
+    max-width: 90%; /* Evita que choque con los bordes de la pantalla */
+}
+
+/* La hora */
+.ubicacion {
+    font-family: 'Montserrat', sans-serif;
+    color: #2A523B; /* #D4AF37; Dorado */
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin: 0 0 2.5rem 0;
+}
+
+/* El botón del icono de ubicación (GPS) */
+.tarjeta-lugar a {
+    color: #D4AF37 !important; /* Forzamos el color Dorado para el icono */
+    font-size: 4.5rem !important; /* Más grande para que sea fácil presionar con el dedo */
+    margin-top: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+    
+    /* Efecto de fondo circular sutil para que parezca un botón */
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 35px 42px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación cuando presionan o pasan el cursor sobre el icono */
+.tarjeta-lugar a:hover {
+    transform: scale(1.15);
+    color: #FFFFFF !important; /* Cambia a blanco al interactuar */
+    background-color: rgba(214, 175, 55, 0.3); /* Fondo dorado semitransparente */
+}
+/* ==========================================
+   ESTILOS PARA LA TARJETA MÚSICA
+   ========================================== */
+.tarjeta-musica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Alto completo de la ventana */
+    width: 100%;
+    background-color: #7A8E80; /* El Verde Malva más oscuro y elegante */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative; /* Esencial para que las notas floten dentro */
+    overflow: hidden;
+}
+
+.contenido-musica {
+    z-index: 2; /* Mantiene el texto y botón por encima de las notas */
+    width: 100%;
+    max-width: 500px;
+}
+
+/* El texto de la música */
+.texto-musica {
+    font-family: 'Great Vibes', cursive;
+    color: #FFFFFF;
+    font-size: 4.5rem; /* Tamaño grande y fluido */
+    line-height: 1.2;
+    margin: 0 0 3rem 0;
+    -webkit-text-stroke: 1px #FFFFFF;
+    font-weight: 300;
+}
+
+/* El Botón "Sugerime una canción" */
+.btn-sugerir {
+    font-family: 'Montserrat', sans-serif;
+    color: #D4AF37 !important; /* Texto Dorado */
+    background-color: rgba(255, 255, 255, 0.08); /* Fondo sutil */
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    
+    padding: 38px 35px;
+    border: 2px solid #D4AF37; /* Borde Dorado */
+    border-radius: 50px; /* Completamente redondeado estilo píldora */
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Animación Interactiva del Botón */
+.btn-sugerir:hover {
+    color: #7A8E80 !important; /* Cambia al color de fondo */
+    background-color: #D4AF37; /* Se llena de dorado */
+    transform: translateY(-4px); /* Pequeño salto hacia arriba */
+    box-shadow: 0 8px 25px rgba(214, 175, 55, 0.4);
+}
+
+/* ==========================================
+   ESTILOS PARA LA TARJETA COSTO (ACTUALIZADO)
+   ========================================== */
+.tarjeta-costo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Pantalla completa */
+    width: 100%;
+    background-color: #6C7F72; /* Verde Malva profundo */
+    padding: 30px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative; 
+    overflow: hidden;   
+}
+
+/* Contenedor del texto */
+.contenido-costo {
+    z-index: 5;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Un poco más de espacio entre bloques */
+}
+
+/* Textos informativos menores - ¡AHORA MÁS GRANDES! */
+.tarjeta-costo .detalle {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    font-size: 1.8rem; /* Aumentado significativamente para celulares */
+    font-weight: 400;  /* Un toque más de grosor para mejor lectura */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.5;
+    max-width: 95%;
+    padding:30px;
+}
+
+.tarjeta-costo .detalle1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    font-size: 3.5rem; /* Aumentado significativamente para celulares */
+    font-weight: 400;  /* Un toque más de grosor para mejor lectura */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.5;
+    max-width: 95%;
+    padding:30px;
+}
+/* El Precio destacado - SE MANTIENE IGUAL */
+.tarjeta-costo .precio {
+    font-family: 'Montserrat', sans-serif;
+    color: #D4AF37; 
+    font-size: 3.1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0 0 1rem 0;
+}
+
+/* Botón de Confirmación */
+.btn-confirmar {
+    font-family: 'Montserrat', sans-serif;
+    color: #D4AF37 !important;
+    background-color: rgba(255, 255, 255, 0.08);
+    font-size: 4.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 48px 35px;
+    border: 2px solid #D4AF37;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    margin-bottom: 2rem;
+}
+
+.btn-confirmar:hover {
+    
+    color: #6C7F72 !important;
+    background-color: #D4AF37;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(214, 175, 55, 0.4);
+}
+
+/* Firma "Catalina" - ¡AHORA MÁS GRANDE! */
+.tarjeta-costo .fecha {
+    font-family: 'Great Vibes', cursive;
+    color: #FFFFFF;
+    font-size: 7.5rem; /* Aumentado para que tenga un impacto hermoso */
+    margin: 0;
+    line-height: 1;
+    -webkit-text-stroke: 1px #FFFFFF;
+    padding:70px;
+}
+
+/* ==========================================
+   LUCIÉRNAGAS SEGUNDO PLANO (MÁS APAGADAS)
+   ========================================== */
+.tarjeta-costo::before,
+.tarjeta-costo::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Capa de luciérnagas 1 (Opacidad máxima reducida a 0.4) */
+.tarjeta-costo::before {
+    background-image: 
+        radial-gradient(circle, rgba(214, 175, 55, 0.4) 10%, transparent 11%),
+        radial-gradient(circle, rgba(214, 175, 55, 0.3) 8%, transparent 9%),
+        radial-gradient(circle, rgba(214, 175, 55, 0.4) 12%, transparent 13%);
+    background-size: 250px 250px;
+    background-position: 0 0, 40px 120px, 150px 30px;
+    animation: luciernagasFlotan 14s linear infinite; /* Movimiento un poco más lento y suave */
+}
+
+/* Capa de luciérnagas 2 (Opacidad máxima reducida a 0.3) */
+.tarjeta-costo::after {
+    background-image: 
+        radial-gradient(circle, rgba(214, 175, 55, 0.3) 9%, transparent 10%),
+        radial-gradient(circle, rgba(214, 175, 55, 0.2) 11%, transparent 12%);
+    background-size: 300px 300px;
+    background-position: 100px 150px, 200px 80px;
+    animation: luciernagasFlotanAlterno 20s linear infinite;
+}
+
+/* Animaciones controladas para que el parpadeo sea casi imperceptible */
+@keyframes luciernagasFlotan {
+    0% { transform: translate(0, 0); opacity: 0.1; }
+    25% { opacity: 0.4; }
+    50% { transform: translate(20px, -30px); opacity: 0.2; }
+    75% { opacity: 0.4; }
+    100% { transform: translate(0, -60px); opacity: 0.1; }
+}
+
+@keyframes luciernagasFlotanAlterno {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.1; }
+    33% { opacity: 0.3; transform: translate(-15px, -15px) scale(1.05); }
+    66% { opacity: 0.1; transform: translate(10px, -40px) scale(0.95); }
+    100% { transform: translate(0, -80px) scale(1); opacity: 0.1; }
+}
+
+/* ==========================================
+   ESTILOS PARA LA TARJETA DRESS CODE
+   ========================================== */
+.tarjeta-dresscode {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la pantalla */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Título superpuesto en el centro superior */
+.capa-titulo-dresscode {
+    position: absolute;
+    top: 10%; /* Lo ubica elegantemente arriba */
+    z-index: 10; /* Por encima de las imágenes */
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    
+    /* Fondo translúcido blanco para que el texto resalte */
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo de la tipografía del título */
+.capa-titulo-dresscode h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+/* Palabra "Elegante" en cursiva destacada */
+.resalte-elegante {
+    font-family: 'Montserrat', sans-serif;
+
+    color:  #FFFFFF /*#D4AF37; /* Dorado */
+    font-size: 3.5rem;
+    text-transform: none; /* Evita las mayúsculas en la cursiva */
+    letter-spacing: 0;
+    display: block; /* Baja a la siguiente línea con elegancia */
+    margin-top: 5px;
+    -webkit-text-stroke: 0.5px #D4AF37;
+}
+
+/* ==========================================
+   CARRUSEL AUTOMÁTICO DE 2 IMÁGENES
+   ========================================== */
+.carrusel-contenedor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Estilo común para ambas imágenes de fondo */
+.carrusel-imagen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0; /* Empiezan invisibles */
+    transition: opacity 1.5s ease-in-out; /* Transición suave de fundido */
+    animation: cambiarFondo 10s infinite; /* Animación en bucle de 10 segundos */
+}
+
+/* Desfase de tiempos para lograr el intercambio constante */
+.carrusel-imagen:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.carrusel-imagen:nth-child(2) {
+    animation-delay: 5s; /* Se activa exactamente a la mitad del ciclo */
+}
+
+/* Cronología de la animación para 2 imágenes */
+@keyframes cambiarFondo {
+    0%, 45% {
+        opacity: 1; /* Imagen visible */
+        transform: scale(1);
+    }
+    50%, 95% {
+        opacity: 0; /* Imagen invisible mientras la otra se muestra */
+        transform: scale(1.03); /* Leve efecto zoom para dar dinamismo */
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ==========================================
+   ESTILOS PARA LA TARJETA PLAYLIST
+   ========================================== */
+.tarjeta-playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    justify-content: flex-end;
+    min-height: 100vh; /* Alto completo */
+    width: 100%;
+    
+    /* Imagen de fondo con capa oscura (puedes cambiar el ID por la foto que quieras) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('https://i.postimg.cc/c1zd55sn/playlist.jpg');
+   /* background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://drive.google.com/thumbnail?sz=w1920&id=1sjOxEnZc9A8SIXz9MHVbkQHh2Rjd2P-s');*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    padding: 30px 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.contenido-playlist {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:100px;
+}
+
+/* Título estilizado en cursiva grande */
+.titulo-playlist {
+    font-family: 'Great Vibes', cursive;
+    color: #FFFFFF;
+    font-size: 6rem;
+    margin: 0 0 1rem 0;
+    line-height: 1;
+    
+    font-weight: 100;
+}
+
+/* Frase secundaria en Montserrat */
+.frase-playlist {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 3.5rem 0;
+    line-height: 1.4;
+       /* Hace la letra lo más delgada posible */
+    font-weight: 300;
+}
+
+/* Botón estilizado tipo píldora */
+.btn-playlist {
+    margin-top:20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #D4AF37 !important; /* Texto Dorado */
+    background-color: rgba(255, 255, 255, 0.08);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    
+    padding:  28px 35px;
+    border: 2px solid #D4AF37; /* Borde Dorado */
+    border-radius: 50px;.tarjeta-playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+…    color: #000000 !important; /* El texto pasa a negro para contrastar */
+    background-color: #D4AF37; /* Se llena de dorado */
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(214, 175, 55, 0.4);
+    margin-bottom:100px;
+    margin-top:10px;
+}
+
+
+
+/* ==========================================
+   ESTILOS PARA EL INPUT (CAJA DE TEXTO)
+   ========================================== */
+.form-busqueda input[type="text"] {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.1);
+    
+    /* TAMAÑO GIGANTE CONTROLADO */
+    font-size: 2.5rem; /* Un tamaño grande, elegante y ultra legible */
+    padding: 25px 20px; /* Le da mucha altura y presencia a la caja */
+    width: 100%;
+    max-width: 400px;
+    
+    /* Bordes y diseño */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50px; /* Bordes redondeados tipo píldora, igual que tus botones */
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Estilo del texto de sugerencia (Placeholder) */
+.form-busqueda input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.6rem; /* Al ser mayor o igual a 16px, previene el zoom de base */
+}
+
+/* Cuando el usuario hace clic para escribir */
+.form-busqueda input[type="text"]:focus {
+    border-color: #D4AF37;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 15px rgba(214, 175, 55, 0.4);
+}
+
+
+/* ==========================================
+   Media Queries para pantallas grandes (PC)
+   ========================================== */
+@media (min-width: 768px) {
+    .titulo-invitacion { font-size: 4rem; }
+    .evento { font-size: 4.8rem; }
+    .tarjeta-fecha .fecha { font-size: 8.5rem; }
+     .contenedor-foto {
+          max-width: 800px;
+          height: 80vh;
+      }
+      .fecha { font-size: 12rem; }
+      .tarjeta-contador .fecha { font-size: 12rem; }
+    .numeros-contador { font-size: 3.5rem; letter-spacing: 5px;}
+    .etiqueta-lugar { font-size: 8rem; }
+    .nombre-salon { font-size: 3.5rem; letter-spacing: 5px; }
+    .ubicacion { font-size: 5.5rem; }
+    
+    .texto-musica { font-size: 6rem; }
+    .btn-sugerir { font-size: 1.4rem; padding: 20px 45px; }
+    .notas-musicales span { font-size: 4rem; }
+     
+    .tarjeta-costo .precio { font-size: 4.5rem; } /* Se mantiene igual en PC */
+    .tarjeta-costo .detalle { font-size: 3.2rem; } /* Más grande en PC */
+    .tarjeta-costo .detalle1 { font-size: 3.2rem; } /* Más grande en PC */
+    .tarjeta-costo .fecha { font-size: 8.5rem; } /* Más grande en PC */
+    .btn-confirmar { font-size: 3.4rem; padding: 20px 45px; }
+    .capa-titulo-dresscode h2 { font-size: 2.2rem; }
+    .resalte-elegante { font-size: 4.5rem; display: inline; margin-left: 10px; }
+    .capa-titulo-dresscode { max-width: 700px; padding: 20px 40px; top: 12%; }
+     .titulo-playlist { font-size: 9.5rem; }
+    .frase-playlist { font-size: 2.2rem; }
+    .btn-playlist { font-size: 1.4rem; padding: 20px 45px; }
+    .form-busqueda input[type="text"] {
+        font-size: 3.8rem; /* Aún más grande en computadora */
+        padding: 20px 30px;
+    }
+    .contenido_playlist{padding:100px;}
+}
+
+
+
+
+</style>
+  </head>
+
+  <body>
+
+   <section class="tarjeta-responsive-full">
+ 
+        <div class="subtituloI">Mis XV</div>
+        <h1 class="fechaI">Catalina</h1>   
+   
+</section>
+
+    <section class="tarjeta-fecha">
+
+      <div class="luciernagas-container">
+        <script>
+          for(let i=0; i<40; i++) {
+            document.write(`<div class="firefly" style="top: ${Math.random()*100}%; left: ${Math.random()*100}%; animation-duration: ${5 + Math.random()*10}s;"></div>`);
+          }
+        </script>
+      </div>
+
+      <div class="texto-fecha">
+        <p class="titulo-invitacion">Te invito </p>
+        <p class="titulo-invitacion">a celebrar </p>
+        <p class="titulo-invitacion">mis quince</p>
+        <p class="evento"> ~ Sábado ~</p>
+        <p class="titulo-invitacion1">17 de octubre de 2026</p>
+        <div class="contenedor-fecha-icono" style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+ 
+   
+
+    </section>
+
+    <section class="tarjeta-contador">
+      <div class="marco">  
+        <p class="fecha">Faltan</p>
+        <div class="cuenta-regresiva">
+    <div class="bloque-tiempo">
+        <span id="dias" class="numero">00</span>
+        <span class="etiqueta">Días</span>
+    </div>
+    
+    <div class="separador">:</div>
+
+    <div class="bloque-tiempo">
+        <span id="horas" class="numero">00</span>
+        <span class="etiqueta">Hs</span>
+    </div>
+    
+    <div class="separador">:</div>
+
+    <div class="bloque-tiempo">
+        <span id="minutos" class="numero">00</span>
+        <span class="etiqueta">Min</span>
+    </div>
+    
+    <div class="separador">:</div>
+
+    <div class="bloque-tiempo">
+        <span id="segundos" class="numero">00</span>
+        <span class="etiqueta">Seg</span>
+    </div>
+</div>
+      </div>
+    </section>
+
+    <section class="tarjeta-lugar">
+        <p class="etiqueta-lugar">Lugar</p>
+        <p class="nombre-salon">Salón de la Cooperativa de Monte Cristo </p>
+        <p class="ubicacion">21.00 horas</p>
+        <a href="https://maps.app.goo.gl/S8aYkjZUzFG6ZqDV6"
+            target="_blank" >
+            <i class="fa-solid fa-location-dot"></i>
+        </a>
+    </section>
+    
+    <!-- ==========================================
+     SECCIÓN PLAYLIST / MÚSICA
+     ========================================== -->
+
+<section class="tarjeta-playlist">
+    <div class="contenido-playlist">
+        <h2 class="titulo-playlist">Playlist</h2>
+        <p class="frase-playlist">¿Qué canción no puede faltar?</p>
+        
+        <div class="form-busqueda">
+            <button type="button" id="btn-abrir-playlist" class="btn-playlist">Agregar Canción</button>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const botonAbrir = document.getElementById('btn-abrir-playlist');
+    
+    // Tu link oficial del formulario (el que me pasaste al principio)
+    const urlGoogleForm = "https://docs.google.com/forms/d/e/1FAIpQLSc07-fjfWCzl4Kdb3WLG-MLhdHZsO5xrn4kmNh_PG3g8FCVgg/viewform?usp=sharing";
+
+    if (botonAbrir) {
+        botonAbrir.addEventListener('click', function() {
+            // Abre el formulario de Google en una pestaña nueva del navegador
+            window.open(urlGoogleForm, '_blank');
+        });
+    }
+});
+</script>
+
+
+   <section class="tarjeta-dresscode">
+    <div class="capa-titulo-dresscode">
+       <h2>Dress Code: <span class="resalte-elegante">Elegante</span></h2>
+    </div>
+
+    <div class="carrusel-contenedor">
+        <!-- <div class="carrusel-imagen" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://drive.google.com/thumbnail?sz=w1920&id=1C1mh1_p2z3mrFyKU-cM5OJvYkipF0iXX');"></div>-->
+        <div class="carrusel-imagen" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://i.postimg.cc/T2bTFJh5/dresscode-H.png');"></div>
+        <div class="carrusel-imagen" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(' https://i.postimg.cc/66c3k7kP/dresscode-M.png');"></div>
+       
+    </div>
+    </section>
+
+    <!-- Modal para los modelos -->
+    <div id="modal-vestimenta" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModelo()">&times;</span>
+       <!-- <h3 id="titulo-modal">Dress Code</h3>-->
+        <p id="texto-modelo"></p>
+    </div>
+    </div>
+
+    <section class="tarjeta-costo">
+        <div class="contenido-costo">
+            <p class="fecha1">Tu presencia es importante para mí</p>
+            
+            <p class="detalle">Valor de la tarjeta:</p>
+            <p class="precio">$40.000</p>
+            
+            <a href="https://forms.gle/NoFfV3Tp53mkrJhK6" class="btn-confirmar">
+            Confirmá tu asistencia
+            </a>
+
+            <p class="detalle1"> te espero!</p>
+           
+            <p class="fechaf">Caty</p>   
+
+        </div>
+
+
+     
+    </section>
+
+  </body>
+  </html>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+ 
+    const fechaEvento = new Date("Oct 17, 2026 00:00:00").getTime();
+    const x = setInterval(function() {
+        const ahora = new Date().getTime();
+        const distancia = fechaEvento - ahora;
+
+        // Cálculos matemáticos para días, horas, minutos y segundos
+        const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+        // Función auxiliar para agregar el cero a la izquierda si es necesario
+        const formatear = (num) => num < 10 ? "0" + num : num;
+
+        // Inyectamos los valores en los elementos correspondientes
+        document.getElementById("dias").innerText = formatear(dias);
+        document.getElementById("horas").innerText = formatear(horas);
+        document.getElementById("minutos").innerText = formatear(minutos);
+        document.getElementById("segundos").innerText = formatear(segundos);
+
+        // Si la cuenta regresiva termina
+        if (distancia < 0) {
+            clearInterval(x);
+            document.querySelector(".cuenta-regresiva").innerHTML = "<h3>¡Llegó el día!</h3>";
+        }
+    }, 1000);
+});
+</script>
+  
+
+
+
+ 
