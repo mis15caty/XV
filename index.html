@@ -239,61 +239,85 @@
 
     /* --- SECCIÓN 5: PLAYLIST --- */
     .tarjeta-playlist {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('https://i.postimg.cc/c1zd55sn/playlist.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        text-align: center;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 1. Cambiamos a flex-end para enviar el contenido totalmente hacia abajo */
+    justify-content: flex-end; 
+    min-height: 100vh; 
+    width: 100%;
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('https://i.postimg.cc/c1zd55sn/playlist.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* 2. El padding-bottom de 40px actúa como ese "margen pequeño" seguro desde abajo de la pantalla */
+    padding: 20px 20px 40px 20px; 
+    box-sizing: border-box;
+    text-align: center;
+}
 
-    .contenido-playlist {
-        width: 100%;
-        max-width: 450px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.contenido-playlist {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 3. Quitamos el padding de 100px que centraba el contenido a la fuerza */
+    padding: 0; 
+    margin: 0;
+}
 
-    .titulo-playlist {
-        font-family: 'Great Vibes', cursive;
-        color: #FFFFFF;
-        font-size: 5rem;
-        margin: 0 0 10px 0;
-        line-height: 1;
-        margin-top:40px;
-    }
+/* Título estilizado en cursiva grande */
+.titulo-playlist {
+    font-family: 'Great Vibes', cursive;
+    color: #FFFFFF;
+    font-size: 6rem;
+    margin: 0 0 1rem 0;
+    line-height: 1;
+    font-weight: 100;
+}
 
-    .frase-playlist {
-        color: #FFFFFF;
-        font-size: 1.1rem;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin: 0 0 30px 0;
-        line-height: 1.4;
-        font-weight: 300;
-    }
+/* Frase secundaria en Montserrat */
+.frase-playlist {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 2rem 0; /* Reducido un poco para compactar el bloque abajo */
+    line-height: 1.4;
+    font-weight: 300;
+}
 
-    .btn-playlist {
-        font-family: 'Montserrat', sans-serif;
-        color: #D4AF37 !important;
-        background-color: rgba(255, 255, 255, 0.08);
-        font-size: 1.1rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        text-decoration: none;
-        padding: 15px 30px;
-        border: 2px solid #D4AF37;
-        border-radius: 50px;
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
+/* Botón estilizado tipo píldora */
+.btn-playlist {
+    font-family: 'Montserrat', sans-serif;
+    color: #D4AF37 !important; 
+    background-color: rgba(255, 255, 255, 0.08);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    
+    padding: 28px 35px;
+    border: 2px solid #D4AF37; 
+    border-radius: 50px;
+    transition: all 0.3s ease; /* Suaviza la animación del hover */
+    
+    /* 4. Quitamos los márgenes innecesarios para que no pelee con el contenedor */
+    margin: 0; 
+}
 
-    .btn-playlist:hover {
-        color: #000000 !important;
-        background-color: #D4AF37;
-    }
-
+/* Efecto Hover del botón */
+.btn-playlist:hover {
+    color: #000000 !important; 
+    background-color: #D4AF37; 
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(214, 175, 55, 0.4);
+}
     /* --- SECCIÓN 6: DRESS CODE --- */
     .tarjeta-dresscode {
         position: relative;
