@@ -97,7 +97,8 @@
     .evento {
         font-family: 'Great Vibes', cursive;
         color: #ba9a30;
-        font-size: 4.5rem;
+        /* 🚀 MODIFICADO: Achicado a 2.5rem para celular */
+        font-size: 2.5rem;
         font-weight: 700;
         letter-spacing: 2px;
         margin: 15px 0;
@@ -209,7 +210,8 @@
 
     .nombre-salon {
         color: #FFFFFF;
-        font-size: 1.6rem;
+        /* 🚀 MODIFICADO: Cambiado a 3rem en celular */
+        font-size: 3rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -239,85 +241,75 @@
 
     /* --- SECCIÓN 5: PLAYLIST --- */
     .tarjeta-playlist {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 1. Cambiamos a flex-end para enviar el contenido totalmente hacia abajo */
-    justify-content: flex-end; 
-    min-height: 100vh; 
-    width: 100%;
-    
-    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('https://i.postimg.cc/c1zd55sn/playlist.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    /* 2. El padding-bottom de 40px actúa como ese "margen pequeño" seguro desde abajo de la pantalla */
-    padding: 20px 20px 40px 20px; 
-    box-sizing: border-box;
-    text-align: center;
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; 
+        min-height: 100vh; 
+        width: 100%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('https://i.postimg.cc/c1zd55sn/playlist.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 20px 20px 40px 20px; 
+        box-sizing: border-box;
+        text-align: center;
+    }
 
-.contenido-playlist {
-    width: 100%;
-    max-width: 550px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 3. Quitamos el padding de 100px que centraba el contenido a la fuerza */
-    padding: 0; 
-    margin: 0;
-}
+    .contenido-playlist {
+        width: 100%;
+        max-width: 550px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0; 
+        margin: 0;
+    }
 
-/* Título estilizado en cursiva grande */
-.titulo-playlist {
-    font-family: 'Great Vibes', cursive;
-    color: #FFFFFF;
-    font-size: 3rem;
-    margin: 0 0 1rem 0;
-    line-height: 1;
-    font-weight: 100;
-}
+    .titulo-playlist {
+        font-family: 'Great Vibes', cursive;
+        color: #FFFFFF;
+        font-size: 3rem;
+        margin: 0 0 1rem 0;
+        line-height: 1;
+        font-weight: 100;
+    }
 
-/* Frase secundaria en Montserrat */
-.frase-playlist {
-    font-family: 'Montserrat', sans-serif;
-    color: #FFFFFF;
-    font-size: 1.8rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin: 0 0 2rem 0; /* Reducido un poco para compactar el bloque abajo */
-    line-height: 1.4;
-    font-weight: 300;
-}
+    .frase-playlist {
+        font-family: 'Montserrat', sans-serif;
+        color: #FFFFFF;
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 0 0 2rem 0; 
+        line-height: 1.4;
+        font-weight: 300;
+    }
 
-/* Botón estilizado tipo píldora */
-.btn-playlist {
-    font-family: 'Montserrat', sans-serif;
-    color: #D4AF37 !important; 
-    background-color: rgba(255, 255, 255, 0.08);
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-decoration: none;
-    
-    padding: 28px 35px;
-    border: 2px solid #D4AF37; 
-    border-radius: 50px;
-    transition: all 0.3s ease; /* Suaviza la animación del hover */
-    
-    /* 4. Quitamos los márgenes innecesarios para que no pelee con el contenedor */
-    margin: 0; 
-}
+    .btn-playlist {
+        font-family: 'Montserrat', sans-serif;
+        color: #D4AF37 !important; 
+        background-color: rgba(255, 255, 255, 0.08);
+        /* 🚀 MODIFICADO: Letra cambiada a 1.8rem para celular */
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-decoration: none;
+        padding: 28px 35px;
+        border: 2px solid #D4AF37; 
+        border-radius: 50px;
+        transition: all 0.3s ease; 
+        margin: 0; 
+    }
 
-/* Efecto Hover del botón */
-.btn-playlist:hover {
-    color: #000000 !important; 
-    background-color: #D4AF37; 
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(214, 175, 55, 0.4);
-}
+    .btn-playlist:hover {
+        color: #000000 !important; 
+        background-color: #D4AF37; 
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(214, 175, 55, 0.4);
+    }
+
     /* --- SECCIÓN 6: DRESS CODE --- */
     .tarjeta-dresscode {
         position: relative;
@@ -340,7 +332,8 @@
 
     .capa-titulo-dresscode h2 {
         color: #FFFFFF;
-        font-size: 1.3rem;
+        /* 🚀 MODIFICADO: Ajustado a 2rem para celular */
+        font-size: 2rem;
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -349,7 +342,8 @@
 
     .resalte-elegante {
         color: #FFFFFF;
-        font-size: 2.5rem;
+        /* 🚀 MODIFICADO: Ajustado a 2rem para celular */
+        font-size: 2rem;
         display: block;
         margin-top: 5px;
         -webkit-text-stroke: 0.5px #D4AF37;
@@ -422,7 +416,8 @@
 
     .tarjeta-costo .precio {
         color: #D4AF37; 
-        font-size: 3rem;
+        /* 🚀 MODIFICADO: Ajustado a 2rem para celular */
+        font-size: 2rem;
         font-weight: 700;
         letter-spacing: 2px;
         margin: 0 0 25px 0;
@@ -473,10 +468,10 @@
        ========================================== */
     @media (min-width: 768px) {
         .subtituloI { font-size: 4.5rem; }
-        .fechaI { font-size: 8.5rem; }
+        .fechaI { font-size: 3.5rem; }
         .titulo-invitacion { font-size: 3.5rem; }
         .titulo-invitacion1 { font-size: 2.5rem; }
-        .evento { font-size: 3.5rem; }
+        .evento { font-size: 3.5rem; } /* Vuelve a crecer en pantallas grandes */
         .tarjeta-contador .fecha { font-size: 3.5rem; }
         .marco { padding: 50px; max-width: 650px; }
         .numero { font-size: 4rem; }
@@ -485,7 +480,7 @@
         .cuenta-regresiva { gap: 20px; }
         .bloque-tiempo { min-width: 90px; }
         .etiqueta-lugar { font-size: 4rem; }
-        .nombre-salon { font-size: 3rem; }
+        .nombre-salon { font-size: 3rem; } /* Reestablece tamaño prolijo para PC */
         .ubicacion { font-size: 3rem; }
         .tarjeta-lugar a { font-size: 3.5rem !important; padding: 25px 30px; }
         .titulo-playlist { font-size: 3rem; }
@@ -496,7 +491,7 @@
         .resalte-elegante { font-size: 2.8rem; }
         .fecha1 { font-size: 3rem; }
         .tarjeta-costo .detalle { font-size: 2rem; }
-        .tarjeta-costo .precio { font-size: 2rem; }
+        .tarjeta-costo .precio { font-size: 2rem; } /* Escala en PC */
         .btn-confirmar { font-size: 1.5rem; padding: 20px 40px; }
         .tarjeta-costo .detalle1 { font-size: 2.2rem; }
         .fechaf { font-size: 4rem; }
